@@ -25,6 +25,15 @@
     @if(Request::is('/'))
     @yield('welcome')
     @endif
+    @if(Request::is('contacts'))
+    <div class="container">
+        <div class="row justify-content-center">
+            @yield('contact')
+        </div>
+        
+    </div>
+    
+    @endif
     @include('inc.footer')
 
 </body>

@@ -11,3 +11,9 @@ Route::get('/admin/login', function () {
 Route::get('/index', function () {
     return view('public/index');
 });
+Route::get('/contacts', function () {
+    return view('public/contacts');
+});
+Route::post('/contacts/submit', function () {
+    return "Okey";
+});
