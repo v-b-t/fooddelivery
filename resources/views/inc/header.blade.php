@@ -6,9 +6,9 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 text-white">Головна</a></li>
-          <li><a href="/index" class="nav-link px-2 text-white">Заклади</a></li>
-          <li><a href="/contacts" class="nav-link px-2 text-white">Контакти</a></li>        
+          <li><a href="{{ route('welcome') }}" class="nav-link px-2 text-white">Головна</a></li>
+          <li><a href="{{ route('index') }}" class="nav-link px-2 text-white">Заклади</a></li>
+          <li><a href="{{ route('contacts') }}" class="nav-link px-2 text-white">Контакти</a></li>        
         </ul>
 
         <!--<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
