@@ -4,17 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
     <h3 class="text-center text-primary mt-3 mb-3">Contact us</h3>
-    <div class="col-12">
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    </div>
+   
 </div>
 </div>
 <div class="container mb-3">
@@ -44,4 +34,14 @@
     </form>
     </div>
 </div>
+<!--коментарі вивід-->
+{{-- <div class="container mt-3">
+    <h3 class="text-center text-primary mt-3 mb-3">Коментарі</h3>
+    @foreach ($data as $elem)
+        <div class="alert alert-info">
+            <h4>{{$elem->subject}}</h4>
+        </div>
+    @endforeach
+</div> --}}
+
 @endsection

@@ -9,6 +9,11 @@
     </head>
 <body>
     @include('inc.header')
+
+    <div class="container mt-4">
+        @include('inc.messages')
+    </div>
+
     @if(Request::is('index'))
     <div class="container mt-4 mb-3">
         <div class="row">
