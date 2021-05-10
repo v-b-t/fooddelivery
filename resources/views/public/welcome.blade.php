@@ -3,8 +3,22 @@
 @section('title-block') Food delivery - welcome @endsection
 
 @section('welcome')
-    <h1 class="welcome">Welcome</h1>
-    
+    <section>
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="image">
+                <div class="col-12 align-self-center p-4">
+                    <h2 class="welcome text-center">
+                        Замовляйте страви тут і швидка доставка гарантована!
+                        Шукайте вигідні пропозиції та акції
+                        Насолоджуйтесь широким асортиментом їжі та ресторанів!
+                    </h2>
+                
+                </div>
+                 </div>
+            </div>
+        </div>
+    </section>
 @endsection
 
     

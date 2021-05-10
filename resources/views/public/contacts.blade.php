@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title-block') Contact us @endsection
 @section('contact')
-<div class="container">
+<div class="container" style="margin-top: 60px;">
     <div class="row justify-content-center">
     <h3 class="text-center text-primary mt-3 mb-3">Contact us</h3>
    

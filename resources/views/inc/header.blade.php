@@ -1,4 +1,4 @@
-<header class="p-3 bg-dark text-white">
+<header class="p-3 bg-dark text-white fixed-top ">
     <div class="container-fluid">
       <div class="d-flex flex-wrap align-items-center justify-content-around ">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">

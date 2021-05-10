@@ -10947,14 +10947,18 @@ a.text-dark:focus {
 }
 
 .welcome {
-  color: blue;
+  color: #fff;
+}
+
+.image {
+  background-image: url(/images/indian-cuisine-south.jpeg?73a55f89a367a988bd965be0d40fe25d);
+  opacity: 0.8;
+  height: 500px;
+  margin-top: 60px;
 }
 
 .main {
+  margin-top: 60px;
   color: orchid;
-}
-
-footer {
-  width: 100%;
 }
 
