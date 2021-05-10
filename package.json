@@ -20,6 +20,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "adminbsb-materialdesign": "^1.0.7",
         "bootstrap": "^4.6.0"
     }
 }

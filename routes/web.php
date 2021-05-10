@@ -20,3 +20,6 @@ Route::get('/contacts', function () {
 Route::get('/contacts/all', 'ContactController@allData')->name('contacts-data');
 Route::post('/contacts/submit', 'ContactController@submit')->name('contacts-form');
 
+// Route::get('/admin/index_adm', function () {
+//     return view('/admin/index_adm');
+// })->name('index_adm');

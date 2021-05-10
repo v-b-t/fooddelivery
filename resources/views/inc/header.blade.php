@@ -16,7 +16,7 @@
         </form>-->
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Увійти</button>
+          <a href="{{ route('login') }}"><button type="button" class="btn btn-outline-light me-2">Увійти</button></a>
           <button type="button" class="btn btn-warning">Реєстрація</button>
         </div>
       </div>
