@@ -15,7 +15,10 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('cartId');
+            $table->foreignId('cartId')
+            ->constrained('carts')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('firstName');
             $table->integer('middleName');
             $table->integer('lastName');
@@ -26,12 +29,9 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
             $table->text('comment');
         });
-        Schema::table('orders', function (Blueprint $table) {
-            $table->foreignId('cartId')
-            ->constrained('carts')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-        });
+        // Schema::table('orders', function (Blueprint $table) {
+           
+        // });
 
     }
 

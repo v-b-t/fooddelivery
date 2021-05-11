@@ -15,12 +15,6 @@ class CreateCartItemsTable extends Migration
     {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
-            $table->integer('productId');
-            $table->integer('cartId');
-            $table->integer('quantity');
-                       
-        });
-        Schema::table('cart_items', function (Blueprint $table) {
             $table->foreignId('productId')
             ->constrained('products')
             ->onUpdate('cascade')
@@ -29,7 +23,12 @@ class CreateCartItemsTable extends Migration
             ->constrained('carts')
             ->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->integer('quantity');
+                       
         });
+        // Schema::table('cart_items', function (Blueprint $table) {
+            
+        // });
     }
 
     /**

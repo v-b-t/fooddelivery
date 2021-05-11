@@ -15,8 +15,14 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('categoryId');
-            $table->integer('userId');
+            $table->foreignId('categoryId')
+            ->constrained('categories')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->foreignId('userId')
+            ->constrained('users')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('title');
             $table->text('content');
             $table->float('price');
@@ -28,16 +34,9 @@ class CreateProductsTable extends Migration
             $table->timestamps();
            
         });
-        Schema::table('products', function (Blueprint $table) {
-            $table->foreignId('categoryId')
-            ->constrained('categories')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-            $table->foreignId('userId')
-            ->constrained('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
-        });
+        // Schema::table('products', function (Blueprint $table) {
+            
+        // });
 
     }
 
