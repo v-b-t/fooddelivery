@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Admin Panel - Food Delivery</title>
     <!-- Favicon-->
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -71,7 +71,8 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">ADMINBSB - MATERIAL DESIGN</a>
+                <a class="navbar-brand" href="{{asset ('admin/index')}}">Food Delivery Management</a>
+                <a class="navbar-brand" href="{{ asset ('index') }}">Public</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -642,11 +643,9 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                    &copy; 2021 <a href="javascript:void(0);">Food delivery</a>
                 </div>
-                <div class="version">
-                    <b>Version: </b> 1.0.5
-                </div>
+                
             </div>
             <!-- #Footer -->
         </aside>
@@ -799,7 +798,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>DASHBOARD</h2>
+                <h2>Статистика</h2>
             </div>
 
             <!-- Widgets -->
@@ -851,7 +850,7 @@
             </div>
             <!-- #END# Widgets -->
             <!-- CPU Usage -->
-            <div class="row clearfix">
+            {{-- <div class="row clearfix">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="header">
@@ -884,9 +883,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- #END# CPU Usage -->
-            <div class="row clearfix">
+            {{-- <div class="row clearfix">
                 <!-- Visitors -->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
@@ -982,9 +981,9 @@
                     </div>
                 </div>
                 <!-- #END# Answered Tickets -->
-            </div>
+            </div> --}}
 
-            <div class="row clearfix">
+            {{-- <div class="row clearfix">
                 <!-- Task Info -->
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="card">
@@ -1078,10 +1077,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- #END# Task Info -->
                 <!-- Browser Usage -->
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                {{-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="header">
                             <h2>BROWSER USAGE</h2>
@@ -1102,7 +1101,7 @@
                             <div id="donut_chart" class="dashboard-donut-chart"></div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- #END# Browser Usage -->
             </div>
         </div>
