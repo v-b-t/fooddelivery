@@ -11,11 +11,7 @@
           <li><a href="{{ route('contacts') }}" class="nav-link px-2 text-white">Контакти</a></li>        
         </ul>
 
-        <!--<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>-->
-
-        <div class="text-end">
+         <div class="text-end">
           <a href="{{ route('login') }}"><button type="button" class="btn btn-success btn-outline-light me-2">Увійти</button></a>
           <a href="{{ route('register') }}"><button type="button" class="btn btn-warning">Реєстрація</button></a>
           

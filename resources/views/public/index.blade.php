@@ -3,50 +3,27 @@
 @section('title-block') Food delivery @endsection
 
 @section('content')
-    <h1 class="main">main</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>FIRST NAME</th>
-                <th>LAST NAME</th>
-                <th>USERNAME</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Larry</td>
-                <td>Jellybean</td>
-                <td>@lajelly</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Larry</td>
-                <td>Kikat</td>
-                <td>@lakitkat</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="container-fluid" style="margin-top:45px; ">
+        <div class="block-header">
+            <h3 class="text-primary">Оберіть заклад</h3>  
+        </div>
+        <!-- Basic Example -->
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="card">
+                    <div class="header bg-red">
+                        <h2>
+                            Red - Title <small>Description text here...</small>
+                        </h2>
+                    </div>
+                    <div class="body">
+                        Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+
 @endsection
     
 

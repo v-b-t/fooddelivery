@@ -25,6 +25,6 @@ Route::get('/admin/index', function () {
 Route::get('/admin/login', function () {
     return view('admin/login');
 })->name('login');
-Route::get('/admin/register', function () {
+Route::get('/register', function () {
     return view('admin/register');
 })->name('register');
