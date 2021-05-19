@@ -10942,10 +10942,6 @@ a.text-dark:focus {
   }
 }
 
-.login-page {
-  color: red;
-}
-
 .welcome {
   color: #fff;
 }
@@ -10955,9 +10951,5 @@ a.text-dark:focus {
   opacity: 0.8;
   height: 500px;
   margin-top: 60px;
-}
-
-.footer {
-  flex: 0 0 auto;
 }
 

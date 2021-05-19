@@ -14,11 +14,11 @@
 
         </section>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Food delivery</h5>
 
-                    <p>Наш сервіс прононує Вам швидку доставку харчових замовлень по місту!
+                    <p class="mb-4"> Наш сервіс прононує Вам швидку доставку харчових замовлень по місту!
                         В нас Ви можете знайти вигідні пропозиції та знижки.
                         Тут Ви знайдете оптимальні ціни! Це зекономить Ваші фінанси і тому Ви часто будете користуватися
                         нашим
@@ -26,26 +26,6 @@
                         Наш сайт доступний та легкий у користуванні.
                     </p>
                 </div>
-
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Заклади харчування</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-light">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-light">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-light">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-light">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-
-
             </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
