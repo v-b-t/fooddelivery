@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title-block')</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- Google Fonts -->
+    <link href="/css/app.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
         type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-    <!-- Bootstrap Core Css -->
-    <link href="/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    {{-- <link href="/plugins/bootstrap/css/bootstrap.css" rel="stylesheet"> --}}
 
 </head>
+<style>
+
+
+</style>
 
 <body>
     @include('inc.header')
 
-    <div class="container" style="margin-top: 55px;">
+    <div class="container" style="margin-top: 85px;">
         @include('inc.messages')
     </div>
 
     @if (Request::is('index'))
-        <div class="container mt-4 mb-3">
-            <div class="row">
-                <div class="col-4">
+        <div class="container-fluid mt-4 mb-3">
+
+            <div class="row col-12">
+                <div class="col-2">
                     @include('inc.aside')
                 </div>
-                <div class="col-8">
+                <div class="col-10">
                     @yield('content')
                 </div>
 

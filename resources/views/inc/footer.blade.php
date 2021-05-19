@@ -1,3 +1,6 @@
+<div class="wrapper">
+    <div class="push"></div>
+</div>
 <footer class="bg-dark text-center text-light footer">
     <div class="p-3">
         <section class="mb-4 text-light">

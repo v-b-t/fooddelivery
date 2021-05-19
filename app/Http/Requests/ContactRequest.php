@@ -30,20 +30,21 @@ class ContactRequest extends FormRequest
             'message'=>'required|min:10|max:500'
         ];
     }
-    // public function attributes()
-    // {
-    //     return [
-    //         'name'=>'ім"я'
-    //     ];
-    // }
+
 
     public function messages()
     {
         return [
             'name.required'=>'Поле ім*я обов*язкове',
+            'name.min'=>'Поле name має містити хоча б 1 символ',
+            'name.max'=>'Поле name має не більше 30 символів',
             'email.required'=>'Поле email обов*язкове',
             'subject.required'=>'Поле тема обов*язкове',
-            'message.required'=>'Поле повідомлення обов*язкове'
+            'subject.min'=>'Поле тема має містити хоча б 4 символи',
+            'subject.max'=>'Поле тема має містити не більше 50 символів',
+            'message.required'=>'Поле повідомлення обов*язкове',
+            'message.min'=>'Поле повідомлення має містити хоча б 10 символів',
+            'message.max'=>'Поле  повідомлення має не більше 500 символів',
         ];
     }
 }

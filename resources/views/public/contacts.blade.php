@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title-block') Contact us @endsection
 @section('contact')
-<div class="container" style="margin-top: 60px;">
+<div class="container" style="margin-top: 40px;">
     <div class="row justify-content-center">
     <h3 class="text-center text-primary mt-3 mb-3">Contact us</h3>
    
@@ -35,13 +35,13 @@
     </div>
 </div>
 <!--коментарі вивід-->
-{{-- <div class="container mt-3">
+ {{-- <div class="container mt-3">
     <h3 class="text-center text-primary mt-3 mb-3">Коментарі</h3>
     @foreach ($data as $elem)
         <div class="alert alert-info">
             <h4>{{$elem->subject}}</h4>
         </div>
     @endforeach
-</div> --}}
+</div>  --}}
 
 @endsection
