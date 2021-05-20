@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="card p-1 m-2" style="width:220px">
+            <div class="card p-1 m-1" style="width:220px">
                 <a href="#" class="btn btn-warning stretched-link m-2">Десятка Бістро</a>
                 <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
                 <div class="card-body">
@@ -20,7 +20,7 @@
                     <p class="card-text">12:00 - 22:00</p>
                 </div>
             </div>
-            <div class="card p-1 m-2" style="width:220px">
+            <div class="card p-1 m-1" style="width:220px">
                 <a href="#" class="btn btn-warning stretched-link m-1">Фамілія</a>
                 <img class="card-img-top" src="/images/familia.jpg" alt="Restourant image" width="50px;" height="140px;">
                 <div class="card-body">
@@ -28,7 +28,7 @@
                     <p class="card-text">11:00 - 21:00</p>
                 </div>
             </div>
-            <div class="card p-1 m-2" style="width:220px">
+            <div class="card p-1 m-1" style="width:220px">
                 <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
                 <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
                 <div class="card-body">
@@ -36,7 +36,7 @@
                     <p class="card-text">12:00 - 22:00</p>
                 </div>
             </div>
-            <div class="card p-1 m-2" style="width:220px">
+            <div class="card p-1 m-1" style="width:220px">
                 <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
                 <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
                 <div class="card-body">
@@ -44,7 +44,7 @@
                     <p class="card-text">12:00 - 22:00</p>
                 </div>
             </div>
-            <div class="card p-1 m-2" style="width:220px">
+            <div class="card p-1 m-1" style="width:220px">
                 <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
                 <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
                 <div class="card-body">

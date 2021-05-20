@@ -2,14 +2,14 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">
-              <a class="navbar-brand" href="/"><img src="{{ asset('images/logo.jpg') }}" alt="" width="50"
+              <a class="navbar-brand" href="{{ route('welcome') }}"><img src="{{ asset('images/logo.jpg') }}" alt="" width="50"
                       height="50"></a>
 
               <div class="collapse navbar-collapse" id="navb">
                   <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
+                      {{-- <li class="nav-item">
                           <a class="nav-link" href="{{ route('welcome') }}">Головна</a>
-                      </li>
+                      </li> --}}
                       <li class="nav-item">
                           <a class="nav-link" href="{{ route('index') }}">Заклади</a>
                       </li>
