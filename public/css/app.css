@@ -10943,8 +10943,85 @@ a.text-dark:focus {
 }
 
 .image {
-  background-image: url(/images/Core-KPIs-1.png);
-  opacity: 0.8;
-  height: 800px;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.container-fluid1 {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.container-fluid1 .content {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(36, 185, 6, 0.8);
+  color: #f1f1f1;
+  width: 90%;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 60px;
+  height: auto;
+}
+
+.content {
+  font-size: 9px;
+  height: auto;
+}
+
+@media (min-width: 576px) {
+  .content {
+    font-size: 11px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    font-size: 16px;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    font-size: 40px;
+    height: auto;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -310px;
+}
+
+.footer,
+.push {
+  height: 310px;
+}
+
+.img-cart {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table tr td {
+  border: 1px solid #FFFFFF;
+}
+
+table tr th {
+  background: #eee;
+}
+
+.panel-shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
 }
 

@@ -4,24 +4,21 @@
 
 @section('welcome')
     <section>
-        
-          <div class="image">
-            <div class="container-fluid align-items-center justify-content-center">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-10">
-                        <h2 class="display-3 font-weight-bold text-warning pt-5 mb-2">Доставка їжі на будь-який смак
-                        </h2>
-                        <hr class="hr-light">
-                        <h3 class="text-warning my-4">Замовляйте страви тут і швидка доставка гарантована!</h3>
-                        <h3 class="text-warning my-4">Ми працюємо в межах міста Івано-Франківська</h3>
-                        <a href="{{ route('index') }}"><button class="btn btn-outline-dark waves-effect">Показати
-                                ресторани<i class="fa fa-food"></i></button></a>
-                        <h3 class="text-warning my-4">Шукайте вигідні пропозиції та акції.<br>Насолоджуйтесь широким
-                            асортиментом їжі та ресторанів!</h3>
-                    </div>
-                </div>
-              </div>
+        <div class="container-fluid1">
+          
+            <div class="col-12">
+            <img src="/images/Core-KPIs-1.png" alt="Notebook" class="image">
+            <div class="content">
+                <p class="font-weight-bold text-white pt-1 mb-1">Доставка їжі на будь-який смак
+                </p>
+                
+                <p class="text-white my-1">Замовляйте страви тут і швидка доставка гарантована!</p>
+                <p class="text-white my-1">Ми працюємо в межах міста Івано-Франківська</p>
+                <a href="{{ route('index') }}"><button class="btn btn-outline-light waves-effect my-1">Показати
+                        ресторани<i class="fa fa-food"></i></button></a>
+                <p class="text-white my-1">Насолоджуйтесь широким асортиментом їжі</p>
             </div>
-     </section>
-
+         
+        </div>
+      </div>
 @endsection

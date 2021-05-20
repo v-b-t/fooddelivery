@@ -16,52 +16,55 @@
     <link rel="icon" href="/images/32382hamburger_98925.ico" />
 </head>
 <style>
-
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
 
 </style>
 
 <body>
     @include('inc.header')
+    <div class="wrapper">
+        <div class="container" style="margin-top: 75px;">
+            @include('inc.messages')
+        </div>
 
-    <div class="container" style="margin-top: 85px;">
-        @include('inc.messages')
-    </div>
-
-    @if (Request::is('index'))
-        <div class="container-fluid mt-4 mb-3">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-4">
-                        @include('inc.aside')
-                    </div>
-                    <div class="col-8">
-                        @yield('content')
+        @if (Request::is('index'))
+            <div class="container-fluid mt-4 mb-3">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            @include('inc.aside')
+                        </div>
+                        <div class="col-8">
+                            @yield('content')
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    @endif
-    @if (Request::is('/'))
-        @yield('welcome')
-    @endif
-    @if (Request::is('contacts'))
-        <div class="container">
-            <div class="row justify-content-center">
-                @yield('contact')
+        @endif
+        @if (Request::is('/'))
+            @yield('welcome')
+        @endif
+        @if (Request::is('contacts'))
+            <div class="container">
+                <div class="row justify-content-center">
+                    @yield('contact')
+                </div>
             </div>
-        </div>
 
-    @endif
+        @endif
 
-    @if (Request::is('cart'))
-        <div class="container">
-            <div class="row justify-content-center">
+        @if (Request::is('cart'))
+            <div class="container">
                 @yield('cart')
             </div>
-        </div>
+        @endif
 
-    @endif
-
+        <div class="push"></div>
+    </div>
     @include('inc.footer')
 
 </body>
