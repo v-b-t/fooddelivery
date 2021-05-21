@@ -33,7 +33,7 @@
 
         @if (Request::is('index'))
             <div class="container-fluid mt-4 mb-3">
-                <div class="col-12">
+                <div class="col-12" >
                     <div class="row">
                         <div class="col-4">
                             @include('inc.aside')
@@ -67,6 +67,21 @@
         @if (Request::is('checkout'))
             <div class="container">
                 @yield('checkout')
+            </div>
+        @endif
+
+        @if (Request::is('products'))
+            <div class="container-fluid">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            @include('inc.aside_user')
+                        </div>
+                        <div class="col-8">
+                            @yield('products')
+                        </div>
+                    </div>
+                </div>
             </div>
         @endif
 

@@ -1,4 +1,5 @@
 @section('aside')
+
     <div class="container" style="margin-top: 45px;">
         <div class="row justify-content-center">
             <h3><span class="badge badge-info shadow rounded">Вибір закладу</span></h3>
