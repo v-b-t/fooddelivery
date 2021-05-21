@@ -6,11 +6,11 @@
                       width="50" height="50" style="border-radius: 25px"></a>
               <div class="collapse navbar-collapse" id="navb">
                   <ul class="navbar-nav mr-auto">
-                      <li class="nav-item ">
-                          <a class="nav-link" href="{{ route('index') }}">Заклади</a>
+                      <li class="nav-item">
+                          <a class="nav-link text-warning" href="{{ route('index') }}">Заклади</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="{{ route('contacts') }}">Контакти</a>
+                          <a class="nav-link text-warning" href="{{ route('contacts') }}">Контакти</a>
                       </li>
                   </ul>
                   <div class="text-end">

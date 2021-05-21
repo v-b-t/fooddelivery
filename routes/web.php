@@ -17,6 +17,9 @@ Route::get('/contacts', function () {
 Route::get('/cart', function () {
     return view('public/cart');
 })->name('cart');
+Route::get('/checkout', function () {
+    return view('public/checkout');
+})->name('checkout');
 
 Route::get('/contacts/all', 'ContactController@allData')->name('contacts-data');
 Route::post('/contacts/submit', 'ContactController@submit')->name('contacts-form');

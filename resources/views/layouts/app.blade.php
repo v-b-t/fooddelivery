@@ -45,21 +45,28 @@
                 </div>
             </div>
         @endif
+
         @if (Request::is('/'))
             @yield('welcome')
         @endif
+
         @if (Request::is('contacts'))
             <div class="container">
                 <div class="row justify-content-center">
                     @yield('contact')
                 </div>
             </div>
-
         @endif
 
         @if (Request::is('cart'))
             <div class="container">
                 @yield('cart')
+            </div>
+        @endif
+
+        @if (Request::is('checkout'))
+            <div class="container">
+                @yield('checkout')
             </div>
         @endif
 
