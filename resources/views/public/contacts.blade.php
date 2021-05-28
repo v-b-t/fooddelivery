@@ -43,5 +43,6 @@
         </div>
     @endforeach
 </div>  --}}
+{{$title}}
 
 @endsection

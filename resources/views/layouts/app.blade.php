@@ -35,7 +35,7 @@
             <div class="container-fluid mt-4 mb-3">
                 <div class="col-12" >
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-4" >
                             @include('inc.aside')
                         </div>
                         <div class="col-8">
@@ -64,7 +64,7 @@
             </div>
         @endif
 
-        @if (Request::is('checkout'))
+        @if (Request::is('cart/checkout'))
             <div class="container">
                 @yield('checkout')
             </div>
