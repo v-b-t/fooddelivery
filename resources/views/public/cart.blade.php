@@ -4,14 +4,14 @@
     <div class="container mb-4" style="margin-top: 105px;">
         <h2 class="text-center text-success">Корзина</h2>
     </div>
-    <div class=" mb-4 col-10 offset-1">
+    <div class="mb-4 col-10 offset-1">
 
         <div class="row">
-            <div class="col-sm-8 col-md-12 col-lg-12 col-xs-4">
+            <div class="col-sm-8 col-md-12 col-lg-12 col-xs-4  mb-4">
                 <div class="panel panel-info panel-shadow">
-                    <div class="panel-body">
+                    <div class="panel-body ">
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table table-hover ">
                                 <thead>
                                     <tr class="text-center">
                                         <th>Product</th>
@@ -82,13 +82,13 @@
                                         <td>$88.00</td>
                                     </tr>
                                 </tbody>
-
+                                
                             </table>
                             <div class="container">
-                                <a href="#" class="btn btn-success pull-left m-2">Продовжити покупки</a>
-                                <a href="#" class="btn btn-primary pull-right m-2">Оформити</a>
+                                <a href="#" class="btn btn-success pull-left mb-3 ml-3">Продовжити покупки</a>
+                                <a href="#" class="btn btn-primary pull-right mb-3 mr-3">Оформити</a>
                             </div>
-
+                           
                         </div>
 
                     </div>

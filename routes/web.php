@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Psr7\Request;
 
 Route::get('/', function () {return view('public/welcome');})->name('welcome');
@@ -20,8 +21,17 @@ Route::get('/contacts/all', 'ContactController@allData')->name('contacts-data');
 Route::post('/contacts/submit', 'ContactController@submit')->name('contacts-form');
 
 
-Route::get('/admin/index', function () {return view('/admin/index');})->name('admin/index');
+// Route::get('/admin/index', function () {return view('/admin/index');})->name('admin/index');
 
-Route::get('/admin/login', function () {return view('admin/login');})->name('login');
+// Route::get('/admin/login', function () {return view('admin/login');})->name('login');
 
-Route::get('/register', function () {return view('admin/register');})->name('register');
+// Route::get('/admin/register', function () {return view('admin/register');})->name('register');
+
+Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
+    
+    Route::get('index', function () {return view('/admin/index');})->name('admin/index');
+});
+
+Auth::routes();
+
+

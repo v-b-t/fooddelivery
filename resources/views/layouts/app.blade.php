@@ -48,6 +48,7 @@
 
         @if (Request::is('/'))
             @yield('welcome')
+            
         @endif
 
         @if (Request::is('contacts'))
