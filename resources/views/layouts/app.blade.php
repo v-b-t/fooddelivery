@@ -30,60 +30,51 @@
             @include('inc.messages')
         </div>
 
-        @if (Request::is('index'))
-            <div class="container-fluid mt-4 mb-3">
-                <div class="col-12" >
-                    <div class="row">
-                        <div class="col-4" >
+
+        <div class="container-fluid mt-4 mb-3">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4">
+                        @if (Request::is('index'))
                             @include('inc.aside')
-                        </div>
-                        <div class="col-8">
-                            @yield('content')
-                        </div>
+                        @endif
+                    </div>
+                    <div class="col-8">
+                        @yield('content')
                     </div>
                 </div>
             </div>
-        @endif
+        </div>
 
-        @if (Request::is('/'))
-            @yield('welcome')
-            
-        @endif
-
-        @if (Request::is('contacts'))
-            <div class="container">
-                <div class="row justify-content-center">
-                    @yield('contact')
-                </div>
+        @yield('welcome')
+        <div class="container">
+            <div class="row justify-content-center">
+                @yield('contact')
             </div>
-        @endif
+        </div>
 
-        @if (Request::is('cart'))
-            <div class="container">
-                @yield('cart')
-            </div>
-        @endif
+        <div class="container">
+            @yield('cart')
+        </div>
 
-        @if (Request::is('cart/checkout'))
-            <div class="container">
-                @yield('checkout')
-            </div>
-        @endif
+        <div class="container">
+            @yield('checkout')
+        </div>
 
-        @if (Request::is('products'))
-            <div class="container-fluid">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-4">
-                            @include('inc.aside_user')
-                        </div>
-                        <div class="col-8">
-                            @yield('products')
-                        </div>
+
+        <div class="container-fluid">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4">
+                        @include('inc.aside_user')
+                    </div>
+                    <div class="col-8">
+                        @yield('products')
                     </div>
                 </div>
             </div>
-        @endif
+        </div>
+
 
         <div class="push"></div>
     </div>

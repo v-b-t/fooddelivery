@@ -8,7 +8,7 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center"  style="margin-bottom:60px; ">
         <div class="card p-3 m-1" style="width:240px; ">      
             <img class="card-img-top" src="/images/products/piza_cardinale.jpg" alt="Meal image" width="30px;" height="140px">
             <div class="card-body">

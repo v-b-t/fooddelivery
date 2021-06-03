@@ -52,7 +52,7 @@
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="{{ __('Register') }}"/>
                             </div>
                             <div class="row">
-                                <a href="{{asset ('admin/login')}}" class="signup-image-link">I am already member</a>
+                                <a href="{{asset ('login')}}" class="signup-image-link">I am already member</a>
                             </div>
                         </form>
                     </div>
