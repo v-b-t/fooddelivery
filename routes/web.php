@@ -20,13 +20,6 @@ Route::get('/contacts/all', 'ContactController@allData')->name('contacts-data');
 
 Route::post('/contacts/submit', 'ContactController@submit')->name('contacts-form');
 
-
-// Route::get('/admin/index', function () {return view('/admin/index');})->name('admin/index');
-
-// Route::get('/admin/login', function () {return view('admin/login');})->name('login');
-
-// Route::get('/admin/register', function () {return view('admin/register');})->name('register');
-
 Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
     
     Route::get('index', function () {return view('/admin/index');})->name('admin/index');
