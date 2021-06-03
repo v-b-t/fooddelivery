@@ -33,5 +33,3 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 });
 
 Auth::routes();
-
-
