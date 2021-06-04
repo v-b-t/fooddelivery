@@ -3,18 +3,16 @@
 @section('content')
 <section class="content">
     <div class="container-fluid">
+        <div class="flash-message my-4">
+            @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+              @if(Session::has('alert-' . $msg))
+              <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
+              @endif
+            @endforeach
+          </div>
         <a href="/admin/add_cat" ><button type="button" class="btn btn-success m-t-15  waves-effect">Додати категорію</button></a>
         <div class="row clearfix ">
-
-            <div class="flash-message">
-                @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-                  @if(Session::has('alert-' . $msg))
-                  <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
-                  @endif
-                @endforeach
-              </div>
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                 <div class="card">
                     <div class="header">
                         <h3>
@@ -22,7 +20,7 @@
                            
                         </h3>
                     </div>
-                    {{-- <pre>{{(var_dump($categories))}}</pre> --}}
+                   
                     <div class="body table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -46,7 +44,7 @@
                                                           
                                         <form method="POST" action="/admin/categories/{{$category->id}}">
                                             @csrf
-                                            {{-- {{ csrf_field() }} --}}
+                                            
                                             {{ method_field('DELETE') }}
                                     
                                             <div class="form-group">
@@ -54,7 +52,7 @@
                                                 
                                             </div>
                                         </form>
-                                        <form method="POST" action="/admin/categories/{{$category->id}}">
+                                        <form method="POST" action="">
                                             @csrf
                                             
                                     
@@ -66,10 +64,7 @@
                                         
                                     </td> 
                                 </tr>
-                                
-                                @endforeach
-                                    
-                                
+                                @endforeach           
                             </tbody>
                         </table>
                         {{ $categories->links() }}

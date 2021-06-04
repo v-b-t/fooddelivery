@@ -26,7 +26,7 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->float('price');
-            $table->binary('photo');
+            $table->varchar('photo')->nullable();
             $table->float('discount');
             $table->float('rating');
             $table->boolean('available');

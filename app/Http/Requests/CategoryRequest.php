@@ -26,7 +26,6 @@ class CategoryRequest extends FormRequest
         return [
             'title'=>'required|min:1|max:30',
             'content'=>'required|max:256',
-
         ];
     }
 
@@ -34,9 +33,10 @@ class CategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required'=>'Поле ім*я обов*язкове',
-            'title.min'=>'Поле name має містити хоча б 1 символ',
-            'tile.max'=>'Поле name має не більше 30 символів',
+            'title.required'=>'Поле назва обов*язкове',
+            'title.min'=>'Поле назва має містити хоча б 1 символ',
+            'title.max'=>'Поле назва має не більше 30 символів',
+            'content.max'=>'Поле контент має не більше 256 символів'
             
         ];
     }

@@ -22,7 +22,7 @@
 </head>
 
 <body class="theme-red">
-    <!-- Page Loader -->
+
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
@@ -38,13 +38,8 @@
             <p>Please wait...</p>
         </div>
     </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Top Bar -->
     @include('/admin/inc_adm.header_adm')
-    
     @yield('content')
 
     <script src="/plugins/jquery/jquery.min.js"></script>

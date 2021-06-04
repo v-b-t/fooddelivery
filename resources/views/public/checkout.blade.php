@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title-block') Оформлення замовлення - Food delivery @endsection
-@section('checkout')
+@section('content')
+<div class="container">
 
     <div class="container mb-4" style="margin-top: 105px;">
         <h2 class="text-center text-success">Оформлення</h2>
@@ -113,6 +114,6 @@
                 </form>
             </div>
         </div>
-    </div>
-
+    </div>      
+</div>
 @endsection

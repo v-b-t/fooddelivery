@@ -24,7 +24,10 @@
                         нашим
                         сервісом.
                         Наш сайт доступний та легкий у користуванні.
+                        <a href="{{ route('register') }}" target="_blank" class="text-white">Sign up.</a>
+                        <a href="{{ route('login') }}" target="_blank" class="text-white">Sign in.</a>
                     </p>
+                    
                 </div>
             </div>
         </div>

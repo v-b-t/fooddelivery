@@ -2,7 +2,7 @@
 
 @section('title-block') Food delivery - welcome @endsection
 
-@section('welcome')
+@section('content')
     <section>
         <div class="container-fluid1">
           

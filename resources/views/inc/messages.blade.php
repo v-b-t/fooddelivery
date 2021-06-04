@@ -1,3 +1,4 @@
+<div class="container" style="margin-top: 75px;">
 @if ($errors->any())
     <div class="col-12 " >
         <div class="alert alert-danger">
@@ -15,3 +16,4 @@
         {{ session('success') }}
     </div>
 @endif
+</div>

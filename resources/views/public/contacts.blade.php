@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title-block') Contact us @endsection
-@section('contact')
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+
 <div class="container" style="margin-top: 40px;">
     <div class="row justify-content-center">
     <h3 class="text-center text-primary mt-3 mb-3">Contact us</h3>
@@ -33,6 +36,8 @@
         <button type="submit" class="btn btn-success">Надіслати</button>
     </form>
     </div>
+</div>
+</div>
 </div>
 <!--коментарі вивід-->
  {{-- <div class="container mt-3">

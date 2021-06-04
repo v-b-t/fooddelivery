@@ -15,10 +15,7 @@
                           </li>
                       </ul>
                       <div class="text-end">
-                          <a href="{{ route('register') }}" target="_blank"><button type="button"
-                                  class="btn btn-warning btn-outline-light me-2">Sign up</button></a>
-                          <a href="{{ route('login') }}" target="_blank"><button type="button"
-                                  class="btn btn-success btn-outline-light me-2">Sign in</button></a>
+                          
                       </div>
                   </div>
 

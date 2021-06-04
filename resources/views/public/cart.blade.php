@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title-block') Моє замовлення - Food delivery @endsection
-@section('cart')
+@section('content')
+<div class="container">
+           
+
     <div class="container mb-4" style="margin-top: 105px;">
         <h2 class="text-center text-success">Корзина</h2>
     </div>
@@ -98,5 +101,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Psr7\Request;
 
+
 Route::get('/', function () {return view('public/welcome');})->name('welcome');
 
 Route::get('/index', function () {return view('public/index');})->name('index');
@@ -20,6 +21,7 @@ Route::get('/contacts/all', 'ContactController@allData')->name('contacts-data');
 
 Route::post('/contacts/submit', 'ContactController@submit')->name('contacts-form');
 
+Route::get('/admin/categories', function () {return view('admin/categories');})->name('categ');
 Route::group(['prefix'=>'admin','middleware' => 'auth','as'=>'admin'], function(){
     
     Route::get('index', function () {return view('/admin/index');})->name('admin/index');
@@ -30,7 +32,9 @@ Route::group(['prefix'=>'admin','middleware' => 'auth','as'=>'admin'], function(
     Route::get('add_prod', function () {return view('/admin/add_prod');})->name('admin/add_prod');
     Route::get('categories', 'CategoriesController@index')->name('admin/categories');
     Route::delete('categories/{id}', 'CategoriesController@delete')->name('admin/categories');
-    Route::post('categories', 'CategoriesController@create')->name('admin/add_cat');
+    
 });
+Route::post('/admin/add_cat/submit', 'CategoriesController@submit')->name('categ-add');
+
 
 Auth::routes();
