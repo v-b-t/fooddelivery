@@ -15,7 +15,7 @@ class ContactController extends Controller
         $contact->email = $req->input('email');
         $contact->subject = $req->input('subject');
         $contact->message = $req->input('message');
-        $contact->save();
+        $contact->save();  //$contact->update(); 
         return redirect()->route('index')->with('success','Ваше повідомлення було відправлено');
     }
 

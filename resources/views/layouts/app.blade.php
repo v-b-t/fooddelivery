@@ -47,6 +47,7 @@
         </div>
 
         @yield('welcome')
+
         <div class="container">
             <div class="row justify-content-center">
                 @yield('contact')
@@ -61,12 +62,13 @@
             @yield('checkout')
         </div>
 
-
         <div class="container-fluid">
             <div class="col-12">
                 <div class="row">
                     <div class="col-4">
+                        @if (Request::is('products'))
                         @include('inc.aside_user')
+                        @endif
                     </div>
                     <div class="col-8">
                         @yield('products')
@@ -74,7 +76,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="push"></div>
     </div>

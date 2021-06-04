@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                 data-target="#navbar-collapse" aria-expanded="false"></a>
-            <a href="javascript:void(0);" class="bars"></a>
+            <a href="javascript:void(0);" class="bars" style="display: block;"></a>
             <a class="navbar-brand" href="{{ asset('admin/index') }}">Food Delivery Management</a>
             <a class="navbar-brand" href="{{ asset('index') }}">Public</a>
         </div>
@@ -19,14 +19,15 @@
                 <img src="/images/user.png" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                <div class="email">john.doe@example.com</div>
+                
+                <div class="email">{{ Auth::user()->email }}</div>
+                <div class="name">{{ Auth::user()->name }}</div>
+                
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                        <li role="separator" class="divider"></li>
+                        
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}<i class="material-icons">input</i></a></li>
@@ -43,11 +44,24 @@
         <div class="menu">
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active">
-                    <a href="{{ asset('admin/index') }}">
+                <li class="">
+                    <a href="{{ asset('/admin/index') }}">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
+                    <a href="{{ asset('/admin/categories') }}">
+                        <i class="material-icons">list</i>
+                        <span>Categories</span>
+                    </a>
+                    <a href="{{ asset('/admin/products') }}">
+                        <i class="material-icons">book</i>
+                        <span>Products</span>
+                    </a>
+                    <a href="{{ asset('/admin/orders') }}">
+                        <i class="material-icons">check</i>
+                        <span>Orders</span>
+                    </a>
+                    
                 </li>
 
             </ul>
