@@ -17,11 +17,11 @@
                             <a href="#" class="btn btn-success stretched-link m-1 ">Усі</a>
                         </div>
                     </div>
-                    @foreach ($categories1 as $category1)
+                    @foreach ($cat as $el)
                     <div class="card bg-light m-2">
                         <div class="card-body p-1 m-1 bg-light text-white text-center" style="width:105px">
                             <img class="card-img-top" src="/images/house.ico" alt="Restourant image">
-                            <a href="#" class="btn btn-success stretched-link m-1">{{ $category1->title }}</a>
+                            <a href="#" class="btn btn-success stretched-link m-1">{{ $el->title }}</a>
                         </div>
                     </div>  
                     @endforeach                     
@@ -44,78 +44,7 @@
                             <p class="card-text">12:00 - 22:00</p>
                         </div>
                     </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Фамілія</a>
-                        <img class="card-img-top" src="/images/familia.jpg" alt="Restourant image" width="50px;" height="140px;">
-                        <div class="card-body">
-                            <p class="card-text">вул. Незалежності</p>
-                            <p class="card-text">11:00 - 21:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
-                    <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-1">Десятка Бістро</a>
-                        <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image">
-                        <div class="card-body">
-                            <p class="card-text">вул. Шашкевича 4</p>
-                            <p class="card-text">12:00 - 22:00</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

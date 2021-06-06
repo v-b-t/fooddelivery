@@ -3,6 +3,13 @@
 @section('content')
 <section class="content">
     <div class="container-fluid">
+        <div class="flash-message my-4">
+            @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+              @if(Session::has('alert-' . $msg))
+              <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}</p>
+              @endif
+            @endforeach
+          </div>
         <a href="/admin/add_prod" ><button type="button" class="btn btn-success m-t-15  waves-effect">Додати продукт</button></a>
         <div class="row clearfix ">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -26,20 +33,40 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($products as $product)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
+                                    <td scope="row">{{ $product->id }}</td>   
+                                    <td>{{ $product->title }}</td>
+                                    <td>{{ $product->content }}</td>
+                                    <td>{{ $product->price }}</td>
                                     <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    
                                     <td>
-                                        <a href="#" class="btn btn-primary" ><i class="fa fa-edit"></i></a>       
-                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>  
+                                        <form method="POST" action="/admin/products/{{$product->id}}">
+                                            @csrf
+                                            
+                                            {{ method_field('DELETE') }}
+                                    
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                                                
+                                            </div>
+                                        </form>
+                                        <form method="POST" action="">
+                                            @csrf
+                                            
+                                    
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success"><i class="fa fa-edit"></i></button>
+                                                
+                                            </div>
+                                        </form>  
                                     </td> 
                                 </tr>
-                                
+                                @endforeach 
                             </tbody>
                         </table>
+                        {{ $products->links() }}
                     </div>
                 </div>
             </div>

@@ -14,7 +14,8 @@
 
                         </div>
                         <div class="body">
-                            <form>
+                            <form actions="{{ route('prod-add') }}" method="POST">
+                                @csrf
                                 {{-- <div class="form-group form-float">
                             <div class="form-line">
                                 <input type="text" id="text" class="form-control">
@@ -24,21 +25,21 @@
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control">
+                                        <input type="text" id="text" class="form-control" name="title">
                                         <label class="form-label">Назва продукту</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control">
+                                        <input type="text" id="text" class="form-control" name="content">
                                         <label class="form-label">Контент</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control">
+                                        <input type="text" id="text" class="form-control" name="price">
                                         <label class="form-label">Ціна</label>
                                     </div>
                                 </div>
@@ -51,9 +52,8 @@
                                 </div>
 
                                 <br>
-                                <button type="button" class="btn btn-primary m-t-15 waves-effect">Додати</button>
-                                <a href="/admin/products"><button type="button"
-                                        class="btn btn-warning m-t-15 waves-effect">Відмінити</button></a>
+                                <button type="submit" class="btn btn-primary m-t-15 waves-effect">Додати</button>
+                                <a href="/admin/products"><button type="button" class="btn btn-warning m-t-15 waves-effect">Відмінити</button></a>
                             </form>
                         </div>
                     </div>

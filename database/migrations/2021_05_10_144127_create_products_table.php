@@ -27,10 +27,10 @@ class CreateProductsTable extends Migration
             $table->text('content');
             $table->float('price');
             $table->varchar('photo')->nullable();
-            $table->float('discount');
-            $table->float('rating');
-            $table->boolean('available');
-            $table->string('slug');
+            $table->float('discount')->nullable();
+            $table->float('rating')->nullable();
+            $table->boolean('available')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
            
         });
