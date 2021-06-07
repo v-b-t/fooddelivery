@@ -32,6 +32,13 @@ class ProductsController extends Controller
 
         $categories2 = DB::table('categories');
         return view('/admin/add_prod', ['categories' => $categories2]);
+        
+    }
+
+    public function allData()
+    {
+      
+        return view('public/products',['products'=> Product::all()]);  
     }
     
     

@@ -9,6 +9,7 @@ Route::get('/', function () {return view('public/welcome');})->name('welcome');
 
 // Route::get('/index', function () {return view('public/index');})->name('index');
 Route::get('/index', 'UsersController@index')->name('index');
+
 Route::get('/contacts', function () {return view('public/contacts', ['title'=>'contacts']);})->name('contacts');
 
 Route::get('/cart/checkout', function () {return view('public/checkout');})->name('checkout');
@@ -25,9 +26,11 @@ Route::get('/admin/categories', function () {return view('admin/categories');})-
 Route::get('/admin/products', function () {return view('admin/products');})->name('prod');
 //додавання продуктів+категорії
 Route::post('/admin/add_cat/submit', 'CategoriesController@submit')->name('categ-add');
+Route::post('/admin/upd_cat/update', 'CategoriesController@update')->name('categ-upd');
 Route::post('/admin/add_prod/submit', 'ProductsController@submit')->name('prod-add');
 //вивід  категорій на паблік
-// Route::get('/index', 'CategoriesController@allData');
+// Route::get('/index', 'CategoriesController@allData')->name('index');
+Route::get('/products', 'ProductsController@allData')->name('products');
 
 Route::group(['prefix'=>'admin','middleware' => 'auth','as'=>'admin'], function(){
     
@@ -35,6 +38,7 @@ Route::group(['prefix'=>'admin','middleware' => 'auth','as'=>'admin'], function(
     Route::get('orders', function () {return view('/admin/orders');})->name('admin/orders');
     Route::get('add_cat', function () {return view('/admin/add_cat');})->name('admin/add_cat');
     Route::get('add_prod', function () {return view('/admin/add_prod');})->name('admin/add_prod');
+    Route::get('upd_cat', function () {return view('/admin/upd_cat');})->name('admin/upd_cat');
     //вивід категорій і продуктів на адмін
     Route::get('categories', 'CategoriesController@index')->name('admin/categories');
     Route::get('products', 'ProductsController@index')->name('admin/products');

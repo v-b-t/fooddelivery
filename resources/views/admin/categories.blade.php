@@ -51,9 +51,9 @@
                                                 
                                             </div>
                                         </form>
-                                        <form method="POST" action="">
+                                        <form method="POST" action="/admin/upd_cat">
                                             @csrf
-                                            
+                                            {{-- {{ method_field('UPDATE') }} --}}
                                     
                                             <div class="form-group">
                                                 <button type="submit" class="btn btn-success"><i class="fa fa-edit"></i></button>

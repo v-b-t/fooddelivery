@@ -27,8 +27,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = DB::table('users');
-        return view('index', ['users' => $users]);  
+        // $users = DB::table('users');
+        // return view('public/index', ['users' => $users]);  
+        return view('public/index',['users'=> User::all()]);  
        
     }
 }
+//->where('products.user_id = users.id')
