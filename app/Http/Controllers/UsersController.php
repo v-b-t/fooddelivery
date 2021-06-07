@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Http\Requests\UserRequest;
 
-class HomeController extends Controller
+
+class UsersController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = DB::table('users');
+        return view('index', ['users' => $users]);  
+       
     }
 }

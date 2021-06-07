@@ -29,18 +29,16 @@ class CategoriesController extends Controller
     {
     
         $categories = DB::table('categories')->paginate(3);
-        return view('/admin/categories', ['categories' => $categories]);
-        // return view('index', ['categories' => $categories]);
-        // $categories1 = Category::all();
-        // return view('index')->with('categories' , $categories1);
-
+        return view('/admin/categories', ['categories' => $categories]);  
     }
-    public function allData()
-    {
-        $data['cat'] = Category::all();
-        return view('index')->with(['cat'=>$data['cat']]);
+    
+    // public function allData()
+    // {
+    //     // $data['cat'] = Category::all();
+    //     // return view('products')->with(['cat'=>$data['cat']]);
+    //     return view('index', ['data' => Category::all()]); 
        
-    }
+    // }
 
 
     public function delete($id)
@@ -56,7 +54,7 @@ class CategoriesController extends Controller
         $category->title = $req->input('title');
         $category->content = $req->input('content');
         $category->save();
-        return redirect()->route('admin.categ')->with('alert-success','Додано категорію');
+        return redirect()->route('categ')->with('alert-success','Додано категорію');
     }
 
 }

@@ -17,14 +17,14 @@
                             <a href="#" class="btn btn-success stretched-link m-1 ">Усі</a>
                         </div>
                     </div>
-                    @foreach ($cat as $el)
+                    {{-- @foreach ($data as $el) --}}
                     <div class="card bg-light m-2">
                         <div class="card-body p-1 m-1 bg-light text-white text-center" style="width:105px">
                             <img class="card-img-top" src="/images/house.ico" alt="Restourant image">
-                            <a href="#" class="btn btn-success stretched-link m-1">{{ $el->title }}</a>
+                            {{-- <a href="#" class="btn btn-success stretched-link m-1">{{ $el->title }}</a> --}}
                         </div>
                     </div>  
-                    @endforeach                     
+                    {{-- @endforeach                      --}}
                 </div>
             </div>
             <div class="col-8">
@@ -36,15 +36,16 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
+                    @foreach ($users as $el)
                     <div class="card p-1 m-1" style="width:220px">
-                        <a href="#" class="btn btn-warning stretched-link m-2">Десятка Бістро</a>
+                        <a href="#" class="btn btn-warning stretched-link m-2">{{ $el->name }}</a>
                         <img class="card-img-top" src="/images/desiatka.png" alt="Restourant image" width="50px;" height="140px;">
                         <div class="card-body">
                             <p class="card-text">вул. Шашкевича 4</p>
                             <p class="card-text">12:00 - 22:00</p>
                         </div>
                     </div>
-                    
+                    @endforeach
                 </div>
             </div>
         </div>

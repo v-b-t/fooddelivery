@@ -29,7 +29,11 @@ class ProductsController extends Controller
     {
         $products = DB::table('products')->paginate(3);
         return view('/admin/products', ['products' => $products]);
+
+        $categories2 = DB::table('categories');
+        return view('/admin/add_prod', ['categories' => $categories2]);
     }
+    
     
     public function delete($id)
     {   

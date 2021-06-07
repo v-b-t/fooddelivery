@@ -16,12 +16,16 @@
                         <div class="body">
                             <form actions="{{ route('prod-add') }}" method="POST">
                                 @csrf
-                                {{-- <div class="form-group form-float">
-                            <div class="form-line">
-                                <input type="text" id="text" class="form-control">
-                                <label class="form-label">Назва категорії</label>
-                            </div>
-                        </div> --}}
+                                
+                              
+                            {{-- <div class="btn-group bootstrap-select form-control show-tick">
+                            <select class="form-control" disabled>
+                            <option>-- Оберіть категорію --</option>
+                            @foreach ($categories2 as $category)
+                            <option value="{{ $category->id }}">{{ $category->title }}</option>
+                            @endforeach                           
+                            </select>
+                            </div> --}}
 
                                 <div class="form-group form-float">
                                     <div class="form-line">

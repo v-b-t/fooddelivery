@@ -15,7 +15,7 @@
                           </li>
                       </ul>
                       <div class="text-end">
-                          
+                        <a href="{{ route('cart') }}"><i class="fa fa-shopping-cart text-white" style="font-size:30px"></i></a>
                       </div>
                   </div>
 

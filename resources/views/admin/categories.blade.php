@@ -16,8 +16,7 @@
                 <div class="card">
                     <div class="header">
                         <h3>
-                            Всі категорії ресторану {{ Auth::user()->name }}
-                           
+                            Всі категорії
                         </h3>
                     </div>
                    
