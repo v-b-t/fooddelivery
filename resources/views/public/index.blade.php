@@ -17,14 +17,14 @@
                             <a href="#" class="btn btn-success stretched-link m-1 ">Усі</a>
                         </div>
                     </div>
-                     {{-- @foreach ($categories as $ell) 
+                     @foreach ($categories as $ell) 
                     <div class="card bg-light m-2">
                         <div class="card-body p-1 m-1 bg-light text-white text-center" style="width:105px">
                             <img class="card-img-top" src="/images/house.ico" alt="Restourant image">
                             <a href="#" class="btn btn-success stretched-link m-1">{{ $ell->title }}</a> 
                         </div>
                     </div>  
-                     @endforeach   --}}
+                     @endforeach  
                 </div>
             </div>
             <div class="col-8">

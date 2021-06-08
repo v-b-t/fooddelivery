@@ -24,6 +24,7 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         return [
+            
             'title'=>'required|min:1|max:30',
             'content'=>'required|max:256',
         ];

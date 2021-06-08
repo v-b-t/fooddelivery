@@ -1,5 +1,5 @@
 @extends('/admin/layouts.app')
-@section('title-block') Admin-Panel - Categories @endsection
+@section('title-block') Admin-Panel - Update Categories @endsection
 @section('content')
 <section class="content">
     <div class="container-fluid">
@@ -9,25 +9,26 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            Додавання категорій
+                            Оновлення категорій
                             <small>для закладу {{ Auth::user()->name }} </small>
                         </h2>
                        
                     </div>
                     <div class="body">
-                        <form action="{{ route('categ-upd') }}" method="POST">
+                        
+                        <form action="{{ route('admin/categ-upd', ['id' => $data->id]) }}" method="POST">
                             @csrf
-                            {{-- @method('PUT') --}}
+                            
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" id="text" class="form-control" name="title">
+                                    <input type="text" id="text" class="form-control" name="title" value="{{$data->title}}">
                                     <label class="form-label">Назва категорії</label>
                                 </div>
                             </div>
 
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" id="text" class="form-control" name="content">
+                                    <input type="text" id="text" class="form-control" name="content" value="{{$data->content}}">
                                     <label class="form-label">Контент</label>
                                 </div>
                             </div>

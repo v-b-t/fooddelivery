@@ -1,5 +1,5 @@
 @extends('/admin/layouts.app')
-@section('title-block') Admin-Panel - Add Product @endsection
+@section('title-block') Admin-Panel - Update Product @endsection
 @section('content')
     <section class="content">
         <div class="container-fluid">
@@ -8,14 +8,14 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Додавання продукту
+                                Оновлення продукту
                                 <small>для закладу {{ Auth::user()->name }} </small>
                             </h2>
 
                         </div>
                         {{--  --}}
                         <div class="body">
-                            <form method="POST" action="{{ route('admin/prod-add') }}">
+                            <form action="{{ route('admin/prod-upd', ['id' => $data->id]) }}" method="POST">
                                 @csrf
                                 
                             {{--                               
@@ -30,21 +30,21 @@
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control" name="title">
+                                        <input type="text" id="text" class="form-control" name="title" value="{{$data->title}}">
                                         <label class="form-label">Назва продукту</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control" name="content">
+                                        <input type="text" id="text" class="form-control" name="content" value="{{$data->content}}">
                                         <label class="form-label">Контент</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" id="text" class="form-control" name="price">
+                                        <input type="text" id="text" class="form-control" name="price" value="{{$data->price}}">
                                         <label class="form-label">Ціна</label>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <button type="submit" class="btn btn-info m-t-15 waves-effect">Додати</button>
+                                <button type="submit" class="btn btn-info m-t-15 waves-effect">Оновити</button>
                                 <a href="/admin/products"><button type="button" class="btn btn-warning m-t-15 waves-effect">Відмінити</button></a>
                             </form>
                         </div>

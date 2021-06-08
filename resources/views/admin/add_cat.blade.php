@@ -15,9 +15,9 @@
                        
                     </div>
                     <div class="body">
-                        <form action="{{ route('categ-add') }}" method="POST">
+                        <form action="{{ route('admin/categ-add') }}" method="POST">
                             @csrf
-                            {{-- @method('PUT') --}}
+                            
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="text" id="text" class="form-control" name="title">

@@ -52,15 +52,10 @@
                                                 
                                             </div>
                                         </form>
-                                        <form method="POST" action="">
-                                            @csrf
-                                            
-                                    
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-success"><i class="fa fa-edit"></i></button>
-                                                
-                                            </div>
-                                        </form>  
+                                        <div class="form-group">
+                                            <a href="{{ route('admin/prod-upd', $product->id) }}"> <button type="submit" class="btn btn-success"><i class="fa fa-edit"></i></button></a>
+                                             
+                                         </div>  
                                     </td> 
                                 </tr>
                                 @endforeach 

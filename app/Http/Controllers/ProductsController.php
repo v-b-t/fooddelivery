@@ -29,10 +29,7 @@ class ProductsController extends Controller
     {
         $products = DB::table('products')->paginate(3);
         return view('/admin/products', ['products' => $products]);
-
-        $categories2 = DB::table('categories');
-        return view('/admin/add_prod', ['categories' => $categories2]);
-        
+ 
     }
 
     public function allData()
@@ -57,6 +54,22 @@ class ProductsController extends Controller
         $product->price = $req->input('price');
         $product->save();
         return redirect()->route('prod')->with('alert-success','Додано продукт');
+    }
+
+    public function update($id)
+    {   
+        $product = new Product();
+        return view('admin/upd_prod',['data'=> $product->find($id)]);
+    }
+
+    public function upd(ProductRequest $req, $id){
+
+        $product = Product::find($id);
+        $product->title = $req->input('title');
+        $product->content = $req->input('content');
+        $product->price = $req->input('price');
+        $product->update();
+        return redirect()->route('admin/products')->with('alert-success','Оновлено продукт');
     }
 
 }

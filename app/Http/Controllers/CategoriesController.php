@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
+use App\Models\User;
 use App\Http\Requests\CategoryRequest;
+use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Route;
 
 
 class CategoriesController extends Controller
@@ -27,19 +30,16 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-    
         $categories = DB::table('categories')->paginate(3);
-        return view('/admin/categories', ['categories' => $categories]);  
+        return view('/admin/categories', ['categories' => $categories]); 
+       
     }
     
     public function allData()
     {
-        // $data['cat'] = Category::all();
-        // return view('products')->with(['cat'=>$data['cat']]);
-        // return view('index', ['data' => Category::all()]); 
-        return view('public/index',['categories'=> Category::all()]);
-    }
-
+        return view('public/index',['categories'=> Category::all(), 'users'=> User::all()]);
+        
+    } 
 
     public function delete($id)
     {   
@@ -48,14 +48,10 @@ class CategoriesController extends Controller
 
     }
 
-    public function update(CategoryRequest $req2)
+    public function update($id)
     {   
         $category = new Category();
-        $category->title = $req2->input('title');
-        $category->content = $req2->input('content');
-        $category->save();
-        return redirect('/admin/categories')->with('alert-primary', "Оновлено категорію");
-
+        return view('admin/upd_cat',['data'=> $category->find($id)]);
     }
 
     public function submit(CategoryRequest $req){
@@ -67,4 +63,12 @@ class CategoriesController extends Controller
         return redirect()->route('categ')->with('alert-success','Додано категорію');
     }
 
+    public function upd(CategoryRequest $req, $id){
+
+        $category = Category::find($id);
+        $category->title = $req->input('title');
+        $category->content = $req->input('content');
+        $category->update();
+        return redirect()->route('admin/categories')->with('alert-success','Оновлено категорію');
+    }
 }
