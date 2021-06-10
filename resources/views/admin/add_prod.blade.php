@@ -18,16 +18,17 @@
                             <form method="POST" action="{{ route('admin/prod-add') }}">
                                 @csrf
                                 
-                            {{--                               
-                            <div class="btn-group bootstrap-select form-control show-tick">
-                            <select class="form-control" disabled>
-                            <option>-- Оберіть категорію --</option>
+                            <select name="categoryId">
+                            <option value="">Оберіть категорію</option>
                             @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->title }}</option>
-                            @endforeach                           
+                            <option value="{{ $category['id'] }}">{{ $category['title'] }}</option>
+                            @endforeach
                             </select>
-                            </div> --}}
+                            
+                            
+                                <input type="hidden" name="userId" value="{{Auth::user()->id}}"/>
 
+                                {{--  --}}
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" id="text" class="form-control" name="title">
@@ -52,7 +53,7 @@
                                 <div class="form-group form-float">
                                     <div class="custom-file">
                                         <label class="custom-file-label">Виберіть фото</label>
-                                        <input name="image" type="file" class="custom-file-input">
+                                        <input name="photo" type="file" class="custom-file-input">
                                     </div>
                                 </div>
                                 <br>

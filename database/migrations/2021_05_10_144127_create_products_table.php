@@ -34,9 +34,7 @@ class CreateProductsTable extends Migration
             $table->timestamps();
            
         });
-        // Schema::table('products', function (Blueprint $table) {
-            
-        // });
+        
 
     }
 

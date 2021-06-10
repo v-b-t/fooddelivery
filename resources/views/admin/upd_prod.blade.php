@@ -49,12 +49,12 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group form-float">
+                                {{-- <div class="form-group form-float">
                                     <div class="custom-file">
                                         <label class="custom-file-label">Виберіть фото</label>
-                                        <input name="image" type="file" class="custom-file-input">
+                                        <input name="photo" type="file" class="custom-file-input" value="{{$data->photo}}">
                                     </div>
-                                </div>
+                                </div> --}}
                                 <br>
                                 <button type="submit" class="btn btn-info m-t-15 waves-effect">Оновити</button>
                                 <a href="/admin/products"><button type="button" class="btn btn-warning m-t-15 waves-effect">Відмінити</button></a>

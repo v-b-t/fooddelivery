@@ -39,7 +39,7 @@
                                     <td>{{ $product->title }}</td>
                                     <td>{{ $product->content }}</td>
                                     <td>{{ $product->price }}</td>
-                                    <td>@mdo</td>
+                                    <td>{{ $product->photo }}</td>
                                     
                                     <td>
                                         <form method="POST" action="/admin/products/{{$product->id}}">

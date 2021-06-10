@@ -32,10 +32,17 @@
                                 </div>
                             </div>
 
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" id="text" class="form-control" name="slug">
+                                    <label class="form-label">Slug</label>
+                                </div>
+                            </div>
+
                           <div class="form-group form-float">
                                 <div class="custom-file">
                                   <label class="custom-file-label">Виберіть фото</label>
-                                  <input name="image" type="file" class="custom-file-input">
+                                  <input name="photo" type="file" class="custom-file-input">
                                   </div>
                             </div>
                             <br>

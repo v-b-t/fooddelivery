@@ -27,8 +27,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        // $users = DB::table('users');
-        // return view('public/index', ['users' => $users]);  
+ 
         return view('public/index',['users'=> User::all()]);  
        
     }

@@ -39,15 +39,6 @@
 </div>
 </div>
 </div>
-<!--коментарі вивід-->
- {{-- <div class="container mt-3">
-    <h3 class="text-center text-primary mt-3 mb-3">Коментарі</h3>
-    @foreach ($data as $elem)
-        <div class="alert alert-info">
-            <h4>{{$elem->subject}}</h4>
-        </div>
-    @endforeach
-</div>  --}}
-{{$title}}
+
 
 @endsection

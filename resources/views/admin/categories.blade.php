@@ -38,7 +38,7 @@
                                     <td scope="row">{{ $category->id }}</td>   
                                     <td>{{ $category->title }}</td>
                                     <td>{{ $category->content }}</td>
-                                    <td>@mdo</td>
+                                    <td>{{ $category->photo }}</td>
                                     <td>
                                                           
                                         <form method="POST" action="/admin/categories/{{$category->id}}">

@@ -9,7 +9,8 @@ use App\Models\User;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Route;
-
+use FileUploadTrait;
+use ImageUpload;
 
 class CategoriesController extends Controller
 {
@@ -20,7 +21,7 @@ class CategoriesController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -59,8 +60,16 @@ class CategoriesController extends Controller
         $category = new Category();
         $category->title = $req->input('title');
         $category->content = $req->input('content');
+        $category->slug = $req->input('slug');
+        // $category->photo = $req->input('photo');
+        // if ($req->has('photo')) {
+        //     $images =  $req->file('photo');
+        //     foreach ($images as $image) {
+        //         $filename = $this->saveImages($image);
+        //     }
+        // }
         $category->save();
-        return redirect()->route('categ')->with('alert-success','Додано категорію');
+        return redirect()->route('admin/categories')->with('alert-success','Додано категорію');
     }
 
     public function upd(CategoryRequest $req, $id){
