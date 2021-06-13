@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Http\Requests;
-
 use Illuminate\Foundation\Http\FormRequest;
-
 class ContactRequest extends FormRequest
 {
     /**
@@ -15,9 +12,7 @@ class ContactRequest extends FormRequest
     {
         return true;
     }
-
     /**
-     * Get the validation rules that apply to the request.
      *
      * @return array
      */
@@ -30,8 +25,6 @@ class ContactRequest extends FormRequest
             'message'=>'required|min:10|max:500'
         ];
     }
-
-
     public function messages()
     {
         return [

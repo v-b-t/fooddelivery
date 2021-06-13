@@ -29,8 +29,6 @@ class CategoryRequest extends FormRequest
             'content'=>'required|max:256',
         ];
     }
-
-
     public function messages()
     {
         return [
